@@ -2,7 +2,7 @@ import React from 'react'
 import s from 'styled-components'
 
 const NavStyle = s.nav`
-  text-align: left;
+  text-align: right;
 `
 
 const Nav = () => {
