@@ -1,7 +1,62 @@
-import { Container } from '@/components/Layout'
+import { Container, Column } from '@/components/Layout'
+import { ProjectCard } from '@/components/Projects'
+
+import Image from 'next/image'
+
+import portal from 'public/projects/portal.png'
 
 <Container>
 
 # projects
+
+<ProjectCard href="http://portal.pennmobile.org" img="portal.png" >
+
+**portal**: a website for penn orgs to create posts and polls for the penn
+mobile app.
+
+_typescript, react, django_
+
+</ProjectCard>
+
+<ProjectCard href="https://github.com/bhsiao01/CIS550-Final-Project" img="vision.jpeg" >
+
+**vision**: find companies headquartered in a city, analyze housing prices, and
+stock performance.
+
+_react, express, node_
+
+</ProjectCard>
+
+<ProjectCard img="anchor.jpeg">
+
+**anchor**: a contact management app.
+
+_javascript, react_
+
+</ProjectCard>
+
+<ProjectCard href="https://github.com/jasminecao/hexsnake" img="hexsnake.jpeg" >
+
+**hexsnek**: snake, but in six directions.
+
+_java_
+
+</ProjectCard>
+
+<ProjectCard href="https://github.com/jasminecao/SCeats" img="sceats.png" >
+
+**SCeats**: a map of restaurants in state college, PA.
+
+_react_
+
+</ProjectCard>
+
+<ProjectCard href="https://hackpenn.com" img="hackpenn.jpeg" >
+
+**hackpenn**: a hackathon for high-schoolers in pennsylvania, a first for
+central PA. (shoutout to an incredible organizer team: lachlan campbell, joy
+liu, matthew stanciu, zane davis-barrs, & theo bleier).
+
+</ProjectCard>
 
 </Container>

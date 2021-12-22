@@ -2,12 +2,34 @@ import React from 'react'
 import s from 'styled-components'
 
 const NavStyle = s.nav`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 2rem 0 1rem 0;
+
+  a {
+    margin-right: 1rem;
+  }
+`
+
+export const Nav = () => {
+  return (
+    <NavStyle>
+      <a href="/">home</a>
+      <a href="projects">projects</a>
+      <a href="bookshelf">bookshelf</a>
+      <a href="film">film</a>
+    </NavStyle>
+  )
+}
+
+const SideNavStyle = s.nav`
   text-align: right;
 `
 
-const Nav = () => {
+export const SideNav = () => {
   return (
-    <NavStyle>
+    <SideNavStyle>
       <ul>
         <a href="/">home</a>
       </ul>
@@ -20,8 +42,6 @@ const Nav = () => {
       <ul>
         <a href="film">film</a>
       </ul>
-    </NavStyle>
+    </SideNavStyle>
   )
 }
-
-export default Nav

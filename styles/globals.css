@@ -6,7 +6,8 @@ body {
   margin: 0;
   font-family: 'IBM Plex Serif', serif;
   color: #333333cc;
-  font-size: 18px;
+  min-height: 100vh;
+  border-top: 4px solid #b6111144;
 }
 
 a {
@@ -29,4 +30,5 @@ a:hover {
   background-repeat: no-repeat;
   min-height: 100vh;
   opacity: 0.8;
+  font-size: 18px;
 }

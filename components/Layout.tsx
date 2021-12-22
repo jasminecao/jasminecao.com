@@ -1,6 +1,6 @@
 import React from 'react'
 import s, { css } from 'styled-components'
-import Nav from '@/components/Nav'
+import { Nav } from '@/components/Nav'
 
 export const Row = s.div`
   display: flex;
@@ -25,11 +25,12 @@ interface IColumnProps {
   md?: number
   lg?: number
   center?: boolean
+  vertical?: boolean
 }
 
 export const Column = s.div<IColumnProps>(
-  ({ xs, sm, md, lg, center }) => css`
-    display: flex;
+  ({ xs, sm, md, lg, center, vertical }) => css`
+    display: ${vertical ? 'inline-block' : 'flex'};
     ${xs ? convertWidth(xs) : 'width: 100%;'}
     ${center ? 'margin: 0 auto;' : 'float: left;'}
 
@@ -61,6 +62,7 @@ interface iGroupProps {
 export const Group = s.div<iGroupProps>(
   ({ horizontal, alignItems, justifyContent, margin, padding }) => css`
     display: ${horizontal ? 'flex' : 'inline-block'};
+    width: 100%;
     ${justifyContent && `justify-content: ${justifyContent};`}
     ${alignItems && `align-items: ${alignItems};`}
     ${margin && `margin: ${margin};`}
@@ -70,9 +72,11 @@ export const Group = s.div<iGroupProps>(
 
 export const Container = ({ children }: { children: React.ReactNode }) => (
   <>
-    <Column xs={10} sm={8} md={6} lg={6} center>
-      <Nav />
-      <Group padding="0 2rem">{children}</Group>
+    <Column xs={10} sm={8} md={8} lg={8} center>
+      <Group>
+        <Nav />
+        {children}
+      </Group>
     </Column>
   </>
 )
