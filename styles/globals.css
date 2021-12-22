@@ -23,9 +23,19 @@ a:hover {
   box-sizing: border-box;
 }
 
+table {
+  text-align: left;
+  width: 100%;
+}
+
+td {
+  text-align: left;
+  max-width: 25%;
+}
+
 .home {
   color: #333333ee;
-  background: url('../public/clouds.jpg');
+  background: url('/clouds.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   min-height: 100vh;
