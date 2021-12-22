@@ -4,7 +4,6 @@ import s from 'styled-components'
 const NavStyle = s.nav`
   display: flex;
   flex-direction: row;
-  align-items: center;
   padding: 2rem 0 1rem 0;
 
   a {
@@ -25,6 +24,10 @@ export const Nav = () => {
 
 const SideNavStyle = s.nav`
   text-align: right;
+
+  @media only screen and (max-width: 768px) {
+    text-align: left;
+  }
 `
 
 export const SideNav = () => {

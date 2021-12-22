@@ -26,16 +26,19 @@ interface IColumnProps {
   lg?: number
   center?: boolean
   vertical?: boolean
+  home?: boolean
 }
 
 export const Column = s.div<IColumnProps>(
-  ({ xs, sm, md, lg, center, vertical }) => css`
+  ({ xs, sm, md, lg, center, vertical, home }) => css`
     display: ${vertical ? 'inline-block' : 'flex'};
     ${xs ? convertWidth(xs) : 'width: 100%;'}
     ${center ? 'margin: 0 auto;' : 'float: left;'}
+    ${home && 'display: inline-block;'}
 
     @media only screen and (min-width: 768px) {
       ${sm && convertWidth(sm)}
+      display: ${vertical ? 'inline-block' : 'flex'};
     }
 
     @media only screen and (min-width: 992px) {
