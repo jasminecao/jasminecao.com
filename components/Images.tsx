@@ -21,7 +21,7 @@ const Images = () => {
     <div key={img} style={{ margin: '0.5rem', display: 'inline-block' }}>
       <Image
         key={img}
-        src={`/film/${img}.jpg`}
+        src={`/film/${img}.JPG`}
         width="450"
         height="300"
         alt={img}
